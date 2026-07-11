@@ -1,0 +1,213 @@
+/*--- Universal Properties ---*/
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+}
+body{
+    background-color: #eeeeee;
+}
+/*--- Header and navigation bar styling ---*/
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #3a4750;
+    color:#eeeeee;
+    display: flex;
+    justify-content: space-between;
+}
+header a {
+    color: #eeeeee;
+     transition: 0.5s ease;
+     display: inline-block;
+     border-radius: 10px;
+     border: 2px solid transparent;
+     margin-left: 1rem;
+}
+header a:hover {
+    color: #00adb5;
+    transform: scale(1.05);
+    border: 2px solid #00adb5;
+    background-color: #eeeeee;
+}
+#name {
+    display: inline-block;
+    padding-right: 5px;
+}
+.profile a {
+    padding: 5px;
+}
+.navbar a {
+    padding:5px;
+}
+/*--- Main content styling ---*/
+#about{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin: 6rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    font-size:1.25rem;
+}
+span{
+    color:#00adb5;
+}
+.about-img{
+    border-radius: 50%;
+}
+.about-img img{
+    border-radius: 50%;
+    width: 13vw;
+    
+}
+.about-content{
+    padding: 4rem;
+}
+.about-content h1{
+    font-size: 3rem;
+    padding: 1rem 0 1rem 0;
+}
+.about-content h3{
+    padding: 0.5rem;
+}
+.about-content ul{
+    display: flex;
+    padding-left: 2rem;
+}
+.about-content ul li{
+    padding-right: 2rem;
+    font-weight: 500;
+    list-style-type:circle;
+}
+.about-content p {
+    padding: 1rem;
+}
+
+/*--- Projects section styling ---*/
+#projects h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.project-showcase{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+.project{
+    width: 25%;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    background-color: #00adb5;
+    color: #eeeeee;
+}
+.project .project-name{
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.project .description{
+    padding:2rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.project a img{
+    width:100%;
+    height: 40vh;
+}
+/*--- Footer styling ---*/
+#footer{
+    margin: 2rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+/*--- Media query for tablets ---*/
+@media(max-width:768px){
+    header{
+        position: sticky;
+        z-index: 100;
+    }
+    #about{
+    display:inline-block;
+    gap: none;
+    margin: 2rem;
+    padding: .2rem;
+    }
+    .about-img{
+    border-radius: 50%;
+    position: absolute;
+    top: 9vh;
+    left: 75vw;
+}
+.about-img img{
+    border-radius: 50%;
+    width: 17vw;
+}
+.about-content{
+    padding: 4rem;
+    padding-top: 0;
+}
+
+.project-showcase{
+    display:column;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+.project{
+    width: 100%;
+    margin-top: 2rem;
+}
+}
+/*--- Media query for mobile phones ---*/
+@media(max-width:450px){
+    body{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header{
+        position: absolute;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    header .profile{
+        margin-bottom: .5rem;
+    }
+    #about{
+        margin: 7rem 0 2rem 0;
+        width: 95%;
+        text-align: center;
+    }
+    .about-content{
+        margin: 1rem;
+    }
+    .about-img {
+        display: none;
+    }
+    .about-content ul li{
+        margin-top: 1rem;
+    }
+    .project{
+        margin-top: 0.5rem;
+    }
+    .project a img{
+        width:100%;
+        height: 25vh;
+}
+}
